@@ -4,6 +4,7 @@ import { AppWrapper, AssignGiftsButton, FamilyIdInput, GiftAssignForm } from "..
 import { GiftAssignments } from "./GiftAssignments";
 
 function App() {
+  const {REACT_APP_ASSIGNMENT_API} = process.env
   const [assignments, setAssignments] = useState([])
   const [id, setId] = useState(null)
   const [error, setError] = useState(null)
@@ -11,7 +12,7 @@ function App() {
   const getAssignments = async (e) => {
     setError(null)
     try {
-      const assignmentData = await axios.get(`http://localhost:8080/assignments/${id}`)
+      const assignmentData = await axios.get(`${REACT_APP_ASSIGNMENT_API}/assignments/${id}`)
       setAssignments(assignmentData.data)
     } catch (e) {
       setError('Something went wrong. Check your id and try again')
