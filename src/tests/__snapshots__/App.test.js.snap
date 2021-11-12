@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given an App component When the component is rendered should match the snapshot 1`] = `
+<styled.div>
+  <GiftAssignForm>
+    <FamilyIdInput
+      onChange={[Function]}
+      placeholder="ID"
+      type="number"
+    />
+    <AssignGiftsButton
+      onClick={[Function]}
+    >
+      Get My Assignments!
+    </AssignGiftsButton>
+  </GiftAssignForm>
+</styled.div>
+`;
+
+exports[`Given an App component When the id is entered should show the gift assignments after clicking the button 1`] = `
+<styled.div>
+  <GiftAssignForm>
+    <FamilyIdInput
+      onChange={[Function]}
+      placeholder="ID"
+      type="number"
+    />
+    <AssignGiftsButton
+      onClick={[Function]}
+    >
+      Get My Assignments!
+    </AssignGiftsButton>
+  </GiftAssignForm>
+  <GiftAssignments
+    assignments={
+      Array [
+        Object {
+          "Gifter": "giftee",
+        },
+      ]
+    }
+  />
+</styled.div>
+`;

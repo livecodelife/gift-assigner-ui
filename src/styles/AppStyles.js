@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const AppWrapper = styled.div`
     display: flex;
-    justify-content: center;
     height: 100vh;
     padding-top: 10rem;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
 `
 
 export const GiftAssignForm = styled.div`

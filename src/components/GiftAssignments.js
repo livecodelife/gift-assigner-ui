@@ -1,5 +1,17 @@
 export const GiftAssignments = ({assignments}) => {
-    return (
-        <div></div>
+  const renderAssignments = () => {
+    return  (
+      <ul>
+        {assignments.map((assignment, i) => (
+          <li>{assignment}</li>
+        ))}
+      </ul>
     )
+  }
+    
+  return (
+      <div>
+        {renderAssignments()}
+      </div>
+  )
 }
